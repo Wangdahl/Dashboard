@@ -149,6 +149,9 @@ textarea {
 }
 
 /* Quick links */
+#linkBox .item {
+    justify-content: space-between;
+}
 .quick-link {
     display: flex;
     align-items: center;
@@ -159,6 +162,25 @@ textarea {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.delete-link-btn {
+    width: 20px;
+    height: 20px;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 1px var(--black);
+}
+.link-url-input {
+    width: 100%;
+    background-color: var(--transparent);
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    box-shadow: 0 0 1px var(--black);
 }
 
 /* Footer */
