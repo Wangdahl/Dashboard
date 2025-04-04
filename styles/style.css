@@ -1,0 +1,140 @@
+/* Reset & global styles*/
+*,
+*::before, 
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --black: rgba(10, 10, 10, 1);
+    --white: rgba(250, 250, 250, 1);
+    --transparent: rgba(219, 219, 219, 0.75);
+}
+html {
+    font-size: 16px;
+}
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--black);
+    min-height: 100vh;
+    background-image: url('../images/default-background.jpg');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 3rem;
+}
+h2 {
+    font-size: 1.75rem;
+    font-weight: 400;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+p, a {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--black);
+    text-decoration: none;
+}
+button {
+    background-color: var(--transparent);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    font-size: 1rem;
+    transition: all 0.2s ease-in-out;
+}
+button:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: all 0.2s ease-in-out;
+
+}
+button:active {
+    transform: scale(0.95);
+}
+
+/* header */
+header {
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#time-date {
+    margin-top: 2rem;
+    background-color: var(--transparent);
+    padding: 0.5rem 3.5rem;
+    border-radius: 1rem;
+    font-size: 0.9rem;
+}
+#time {
+    font-weight: 700;
+    margin-right: 0.75rem;
+}
+#date {
+    margin-left: 0.75rem;
+}
+
+/* Main section */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#boxes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+}
+.box {
+    background-color: var(--transparent);
+    height: 422px;
+    width: 300px;
+    text-align: center;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5rem;
+    padding-bottom: 1rem
+}
+.item {
+    width: 90%;
+    height: 60px;
+    background-color: var(--transparent);
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0.5rem;
+}
+textarea {
+    flex: 1;
+    width: 90%;
+    background-color: var(--transparent);
+    border: none;
+    border-radius: 0.5rem;
+    padding: 1rem 0.5rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2rem;
+}

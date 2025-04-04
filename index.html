@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="/styles/mobile.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div id="time-date">
+            <span id="time">10:00</span>
+            <span id="date">10 april 2025</span>
+        </div>
+    </header>
+    <main>
+        <h1>The Dashboard</h1>
+        <section id="boxes">
+            <div class="box" id="linkBox">
+                <h2>Quick links</h2>
+                <div class="item" id="link1"><a href="https://chatgpt.com/"><span></span>ChatGPT</a></div>
+                <div class="item" id="link2"><a href="https://x.com/home"><span></span>Twitter</a></div>
+                <div class="item" id="link3"><a href="https://www.nhl.com/flyers/"><span></span>Flyers</a></div>
+                <button id="addLink"><i class="fa-solid fa-circle-plus"></i> Add new link</button>
+            </div>
+            <div class="box" id="weatherBox">
+                <h2>Weather</h2>
+                <div class="item weatherItem"></div>
+                <div class="item weatherItem"></div>
+                <div class="item weatherItem"></div>
+                <div class="item weatherItem"></div>
+                <div class="item weatherItem"></div>
+            </div>
+            <div class="box" id="sportsBox">
+                <h2>Entertainment</h2>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+            </div>
+            <div class="box" id="notesBox">
+                <h2>Notes</h2>
+                <textarea name="notes" id="notes"></textarea>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <button><i class="fa-solid fa-rotate-right"></i> Switch background</button>
+    </footer>
+</body>
+</html>
