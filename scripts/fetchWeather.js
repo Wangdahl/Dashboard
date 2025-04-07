@@ -1,3 +1,4 @@
+import { OPENWEATHER_API_KEY } from '../env.js';
 //Function to get weather data from OpenWeather API
 const fetchWeather = async (lat, lon) => {
     //Creating URL for API call

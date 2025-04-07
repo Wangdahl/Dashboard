@@ -11,12 +11,13 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
     
     <!--Scripts-->
-    <script src="/env.js"></script>
-    <script src="./scripts/fetchFavicon.js" defer></script>
-    <script src="./scripts/addQuickLink.js" defer></script>
-    <script src="./scripts/deleteQuickLink.js" defer></script>
-    <script src="./scripts/getTime.js" defer></script>
-    <script src="./scripts/fetchWeather.js" defer></script>
+    <script src="/env.js" type="module"></script>
+    <script src="./scripts/fetchFavicon.js" type="module" defer></script>
+    <script src="./scripts/addQuickLink.js" type="module" defer></script>
+    <script src="./scripts/deleteQuickLink.js" type="module" defer></script>
+    <script src="./scripts/getTime.js" type="module" defer></script>
+    <script src="./scripts/fetchWeather.js" type="module" defer></script>
+    <script src="./scripts/fetchMarket.js" type="module" defer></script>
 </head>
 <body>
     <header>
@@ -52,13 +53,13 @@
                 <div class="item weatherItem"></div>
                 <div class="item weatherItem"></div>
             </div>
-            <div class="box" id="sportsBox">
-                <h2>Entertainment</h2>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
+            <div class="box" id="marketBox">
+                <h2>Markets</h2>
+                <div class="item" id="marketSP"></div>
+                <div class="item" id="marketNas"></div>
+                <div class="item" id="marketOmx"></div>
+                <div class="item" id="marketEuro"></div>
+                <div class="item" id="marketBtc"></div>
             </div>
             <div class="box" id="notesBox">
                 <h2>Notes</h2>

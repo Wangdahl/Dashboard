@@ -1,5 +1,5 @@
 
-const getFavIcon = (root = document) => {
+export const getFavIcon = (root = document) => {
     root.querySelectorAll('.quick-link').forEach(link => {
         const url = link.getAttribute('href');
         if (url) {

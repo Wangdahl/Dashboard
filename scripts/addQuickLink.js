@@ -1,3 +1,5 @@
+import { getFavIcon } from './fetchFavicon.js';
+
 document.addEventListener('DOMContentLoaded', () => {
     const addLinkBtn = document.getElementById('addLink');
     const linkBox = document.getElementById('linkBox');
