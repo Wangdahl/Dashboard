@@ -20,10 +20,13 @@ const fetchImage = async (query = 'nature') => {
     }
 }
 //Function to change background
+const input = document.getElementById('themeInput');
 const changeBackground = async () => {
+    const query = input.value.trim() || 'nature';
     try {
-        const imageUrl = await fetchImage();
+        const imageUrl = await fetchImage(query);
         document.body.style.backgroundImage = `url(${imageUrl})`;
+        input.value = '';
     } catch(error) {
         console.error('Failed to change background');
     }
@@ -32,4 +35,9 @@ const changeBackground = async () => {
 const backgroundButton = document.getElementById('backgroundButton');
 backgroundButton.addEventListener('click', () => {
     changeBackground();
+})
+input.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+        changeBackground();
+    }
 })
