@@ -34,6 +34,9 @@ Trots att nycklarna ligger i `env.js` exponeras de fortfarande i frontend-kod so
 ### 3. **Begränsad validering av användarinput**
 När användaren lägger till en snabblänk görs ingen egentlig validering av URL:en mer än trim och visningsnamn. Här finns utrymme för förbättring genom att kontrollera t.ex. giltig domän eller att länken faktiskt fungerar.
 
+### 4. **Få CSS filer** 
+Nästan all styling utförs i en CSS fil. Eventuellt skulle man kunna separera koden utefter komponenten de stylar likt ett React upplägg. Detta skulle innebära att färre kommentarer behövs samtidigt som koden blir lättare att hitta. 
+
 ---
 
 ## Summering

@@ -19,6 +19,9 @@ const fetchWeather = async (lat, lon) => {
 }
 
 const displayWeather = (data) => {
+    const heading = document.getElementById('weather-heading');
+    heading.textContent = `${data.city.name}`;
+
     const weatherItems = document.querySelectorAll('.weatherItem');
     //Clearing old weather data 
     weatherItems.forEach(item => {

@@ -28,8 +28,7 @@ h1 {
     font-size: 3.5rem;
     font-weight: 700;
     color: var(--white);
-    margin-bottom: 2.5rem;
-    margin-top: 1.5rem;
+    padding-right: 1rem;
 }
 h2 {
     font-size: 1.75rem;
@@ -94,6 +93,18 @@ header {
 }
 
 /* Main section */
+#heading {
+    margin-bottom: 2.5rem;
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+#edit-heading-btn {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
 main {
     flex: 1;
     display: flex;
@@ -215,6 +226,8 @@ textarea {
     width: 80%;
 }
 #searchCity {
+    width: 35px;
+    height: 35px;
     justify-self: flex-end;
     margin: 0 auto;
     border-radius: 1rem;

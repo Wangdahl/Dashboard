@@ -20,6 +20,7 @@
     <script src="./scripts/fetchMarket.js" type="module" defer></script>
     <script src="./scripts/fetchImage.js" type="module" defer></script>
     <script src="./scripts/saveNotes.js" type="module" defer></script>
+    <script src="./scripts/editHeading.js" type="module" defer></script>
 </head>
 <body>
     <header>
@@ -29,7 +30,12 @@
         </div>
     </header>
     <main>
-        <h1>The Dashboard</h1>
+        <div id="heading">
+            <h1 id="editable-heading">The Dashboard</h1>
+            <button id="edit-heading-btn" title="Edit title">
+                <i class="fa-solid fa-pen"></i>
+            </button>
+        </div>
         <section id="boxes">
             <div class="box" id="linkBox">
                 <h2>Quick links</h2>
@@ -48,7 +54,7 @@
                 <button id="addLink"><i class="fa-solid fa-circle-plus"></i> Add new link</button>
             </div>
             <div class="box" id="weatherBox">
-                <h2>Weather</h2>
+                <h2 id="weather-heading">Weather</h2>
                 <div class="item weatherItem"></div>
                 <div class="item weatherItem"></div>
                 <div class="item weatherItem"></div>
