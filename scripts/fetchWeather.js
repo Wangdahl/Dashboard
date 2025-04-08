@@ -37,7 +37,7 @@ const displayWeather = (data) => {
         const localDate = new Date((item.dt + tzOffset) * 1000);
         const localHour = localDate.getUTCHours();
         return Math.abs(localHour - 12) <= 1;
-    }).slice(0, 4); // Get the first 5 entries around midday
+    }).slice(0, 4); // Get the first 4 entries around midday
 
     
     middayForecasts.forEach((dayData, index) => {
@@ -103,6 +103,7 @@ const fetchWeatherByCity = async () => {
         }
         const data = await response.json();
         displayWeather(data);
+        input.value = '';
     } catch(error) {
         console.error('Error fetching weather data for city. ', error);
     }
