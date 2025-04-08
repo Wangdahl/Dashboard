@@ -1,0 +1,10 @@
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+        margin-top: 1.5rem;
+    }
+
+    footer {
+        margin-top: 1rem;
+    }
+}
