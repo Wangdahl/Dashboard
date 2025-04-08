@@ -11,13 +11,15 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
     
     <!--Scripts-->
-    <script src="/env.js" type="module"></script>
+    <script src="/env.js" type="module" defer></script>
     <script src="./scripts/fetchFavicon.js" type="module" defer></script>
     <script src="./scripts/addQuickLink.js" type="module" defer></script>
     <script src="./scripts/deleteQuickLink.js" type="module" defer></script>
     <script src="./scripts/getTime.js" type="module" defer></script>
     <script src="./scripts/fetchWeather.js" type="module" defer></script>
     <script src="./scripts/fetchMarket.js" type="module" defer></script>
+    <script src="./scripts/fetchImage.js" type="module" defer></script>
+    <script src="./scripts/saveNotes.js" type="module" defer></script>
 </head>
 <body>
     <header>
@@ -68,7 +70,7 @@
         </section>
     </main>
     <footer>
-        <button><i class="fa-solid fa-rotate-right"></i> Switch background</button>
+        <button id="backgroundButton"><i class="fa-solid fa-rotate-right"></i> Switch background</button>
     </footer>
 </body>
 </html>
