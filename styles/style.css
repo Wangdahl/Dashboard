@@ -29,6 +29,7 @@ h1 {
     font-weight: 700;
     color: var(--white);
     margin-bottom: 2.5rem;
+    margin-top: 1.5rem;
 }
 h2 {
     font-size: 1.75rem;
@@ -58,6 +59,16 @@ button:hover {
 }
 button:active {
     transform: scale(0.95);
+}
+input {
+    width: 100%;
+    background-color: var(--transparent);
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    box-shadow: 0 0 1px var(--black);
 }
 
 /* header */
@@ -173,16 +184,6 @@ textarea {
     justify-content: center;
     box-shadow: 0 0 1px var(--black);
 }
-.link-url-input {
-    width: 100%;
-    background-color: var(--transparent);
-    border: none;
-    border-radius: 0.5rem;
-    padding: 0.5rem;
-    font-family: 'Inter', sans-serif;
-    font-size: 1rem;
-    box-shadow: 0 0 1px var(--black);
-}
 
 /* Weather styling */
 .weatherItem {
@@ -209,6 +210,15 @@ textarea {
 .temp, .description {
     font-size: 0.9rem;
     line-height: 0;
+}
+#cityInput {
+    width: 80%;
+}
+#searchCity {
+    justify-self: flex-end;
+    margin: 0 auto;
+    border-radius: 1rem;
+    box-shadow: 0 0 1px var(--black);
 }
 
 /* Crypto styling */
@@ -243,5 +253,6 @@ footer {
     display: flex;
     justify-content: center;
     padding-bottom: 2rem;
+    margin-top: 1rem;
 }
 
