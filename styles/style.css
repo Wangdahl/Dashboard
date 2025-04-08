@@ -210,6 +210,33 @@ textarea {
     line-height: 0;
 }
 
+/* Crypto styling */
+.cryptoContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+.ticker {
+    font-weight: 700;
+    padding-right: 1rem;
+}
+.priceContainer {
+    width: 175px;
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+}
+.cryptoIcon {
+    height: 24px;
+    width: 24px;
+    margin-right: 0.5rem;
+}
+.change {
+    margin-right: 1rem;
+    justify-self: flex-end;
+    text-align: right;
+    margin-left: auto;
+}
 /* Footer */
 footer {
     display: flex;
