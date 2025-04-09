@@ -194,7 +194,7 @@ textarea {
     border-radius: 1rem;
     box-shadow: 0 0 1px var(--black);
 }
-.delete-link-btn {
+.delete-link-btn, .edit-link-btn {
     width: 20px;
     height: 20px;
     border-radius: 1rem;
@@ -202,6 +202,11 @@ textarea {
     align-items: center;
     justify-content: center;
     box-shadow: 0 0 1px var(--black);
+}
+#linkBox .item .edit-link-btn {
+    font-size: 0.7rem;
+    margin-left: auto;
+    margin-right: 0.5rem;
 }
 #linkInput {
     width: 80%;
