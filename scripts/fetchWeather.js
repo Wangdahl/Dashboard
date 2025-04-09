@@ -19,13 +19,14 @@ const fetchWeather = async (lat, lon) => {
 }
 
 const displayWeather = (data) => {
+    const weatherParent = document.getElementById('weatherBox');
     const heading = document.getElementById('weather-heading');
     heading.textContent = `${data.city.name}`;
 
     const weatherItems = document.querySelectorAll('.weatherItem');
     //Clearing old weather data 
     weatherItems.forEach(item => {
-        item.replaceChildren();
+        weatherParent.removeChild(item);
     })
 
     // Use the city's timezone offset (in seconds) to adjust dt to local time
@@ -37,12 +38,10 @@ const displayWeather = (data) => {
         const localDate = new Date((item.dt + tzOffset) * 1000);
         const localHour = localDate.getUTCHours();
         return Math.abs(localHour - 12) <= 1;
-    }).slice(0, 4); // Get the first 4 entries around midday
+    });
 
     
-    middayForecasts.forEach((dayData, index) => {
-        const dayItem = weatherItems[index];
-
+    middayForecasts.forEach((dayData) => {
         // Convert dt to local time using the timezone offset
         const localDate = new Date((dayData.dt + tzOffset) * 1000);
         const dayName = localDate.toLocaleDateString(undefined, { weekday: 'long' });
@@ -63,6 +62,10 @@ const displayWeather = (data) => {
         const daySpan = document.createElement('span');
         const tempSpan = document.createElement('span');
         const descSpan = document.createElement('span');
+
+        const dayItem = document.createElement('div');
+        dayItem.classList.add('item');
+        dayItem.classList.add('weatherItem');
 
         //Giving elements data
         img.src = iconUrl;
@@ -85,6 +88,7 @@ const displayWeather = (data) => {
         //Adding elements to the existing div
         dayItem.appendChild(img);
         dayItem.appendChild(div1);
+        weatherParent.appendChild(dayItem);
     });
 }
 
