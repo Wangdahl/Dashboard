@@ -3,8 +3,8 @@ import { getFavIcon } from './fetchFavicon.js';
 document.addEventListener('DOMContentLoaded', () => {
     const addLinkBtn = document.getElementById('addLink');
     const linkBox = document.getElementById('linkBox');
-
-    let inputWrapper = null;
+    const urlInput = document.getElementById('linkInput');
+    //let inputWrapper = null;
     const savedLinks = JSON.parse(localStorage.getItem('quickLinks')) || [];
     const deletedDefaults = JSON.parse(localStorage.getItem('deletedDefaults')) || [];
 
@@ -20,38 +20,31 @@ document.addEventListener('DOMContentLoaded', () => {
     savedLinks.forEach(link => renderLinkItem(link.url, link.name));
 
     addLinkBtn.addEventListener('click', () => {
-        if (inputWrapper) return;
+        const url = urlInput.value.trim();
+        if (!url) return;
+        const displayName = extractNameFromUrl(url);
 
-        inputWrapper = document.createElement('div');
-        inputWrapper.classList.add('item');
+        // Save to localStorage
+        savedLinks.push({ url, name: displayName });
+        localStorage.setItem('quickLinks', JSON.stringify(savedLinks));
 
-        const urlInput = document.createElement('input');
-        urlInput.type = 'text';
-        urlInput.placeholder = 'Enter URL';
-        urlInput.classList.add('link-url-input');
+        renderLinkItem(url, displayName);
+        urlInput.value = '';
+    });
+    urlInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+            const url = urlInput.value.trim();
+            if (!url) return;
 
-        inputWrapper.appendChild(urlInput);
-        linkBox.insertBefore(inputWrapper, addLinkBtn);
+            const displayName = extractNameFromUrl(url);
 
-        urlInput.focus();
+            // Save to localStorage
+            savedLinks.push({ url, name: displayName });
+            localStorage.setItem('quickLinks', JSON.stringify(savedLinks));
 
-        urlInput.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter') {
-                const url = urlInput.value.trim();
-                if (!url) return;
-
-                const displayName = extractNameFromUrl(url);
-
-                // Save to localStorage
-                savedLinks.push({ url, name: displayName });
-                localStorage.setItem('quickLinks', JSON.stringify(savedLinks));
-
-                renderLinkItem(url, displayName);
-
-                linkBox.removeChild(inputWrapper);
-                inputWrapper = null;
-            }
-        });
+            renderLinkItem(url, displayName);
+            urlInput.value = '';
+        }
     });
 
     function renderLinkItem(url, displayName) {
@@ -78,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Tag data-url for delete script
         item.setAttribute('data-url', url);
 
-        linkBox.insertBefore(item, addLinkBtn);
+        linkBox.appendChild(item);
         getFavIcon(item);
     }
 
